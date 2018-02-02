@@ -5,6 +5,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { MapPage } from '../pages/map/map';
 import { HomePage } from '../pages/home/home';
+import { SellPage } from '../pages/sell/sell';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -15,6 +16,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     MapPage,
     HomePage,
+    SellPage,
     TabsPage
   ],
   imports: [
@@ -27,6 +29,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     MapPage,
     HomePage,
+    SellPage,
     TabsPage
   ],
   providers: [

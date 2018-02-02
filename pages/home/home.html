@@ -1,23 +1,20 @@
-<ion-header>
-  <ion-navbar color="purple">
-    <img alt="logo" height="40"   src="assets/imgs/flash.png" >
-  </ion-navbar>
-</ion-header>
 
 <ion-content padding>
-  <ion-list>
-  <ion-item-sliding *ngFor="let post of posts">
-    <ion-item>
-      <h2>{{post.name}} {{post.lastname}}</h2>
-      <p>
-        Estrellas
-      </p>
-      <ion-note item-end>1km</ion-note>
-    </ion-item>
-    <ion-item-options side="right">
-      <button ion-button color="secondary">Seleccionar</button>
-      <button ion-button color="danger">Bloquear</button>
-    </ion-item-options>
-  </ion-item-sliding>
-</ion-list>
+
+  <div style="height: 100%;">
+    <div text-center>
+      <img alt="logo" height="50"   src="assets/imgs/flash.png">
+    </div>
+    <br />
+    <br />
+    <div text-center>
+      <button class="boton disable-hover button button-md button-default button-default-md button-large button-large-md button-md-yellow" (click)="buy()" style="">I want to Buy</button>
+    </div>
+    <br />
+    <div text-center>
+      <button class="boton disable-hover button button-md button-default button-default-md button-large button-large-md button-md-yellow" (click)="sell()">I want to Sell</button>
+    </div>
+
+  </div>
+
 </ion-content>

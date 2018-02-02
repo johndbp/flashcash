@@ -1,20 +1,29 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TabsPage } from '../tabs/tabs';
 
+/**
+ * Generated class for the HomePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
+@IonicPage()
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
 })
 export class HomePage {
-  posts: any;
 
-  constructor(public navCtrl: NavController, public http: Http) {
-    this.http.get('http://18.231.29.251/flash/users.php').map(res => res.json()).subscribe(data => {
-        this.posts = data;
-    });
-    console.log(this.posts);
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad HomePage');
+  }
+
+  sell(){
+    this.navCtrl.push(TabsPage);
+  }
 }
